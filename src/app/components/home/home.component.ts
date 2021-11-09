@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PRODUCTS} from "./mock-data";
 import{Products} from '../../model/Products';
+import {Cards} from "../../model/Cards";
 
 
 
@@ -12,4 +13,12 @@ import{Products} from '../../model/Products';
 export class HomeComponent {
 products:Products[] = PRODUCTS;
 
+  data:Cards[] = [];
+
+
+  ngOnInit(){
+    this.data = this.products.map((products) => {
+      return { title : products.name, subTitle:products.price + ' ans', image: products.picture}
+    });
+  }
 }
