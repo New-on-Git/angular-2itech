@@ -12,7 +12,6 @@ export class ContactComponent  {
 
 
   constructor(private contactService: ContactService) {
-
   }
 
   onSubmit():void{

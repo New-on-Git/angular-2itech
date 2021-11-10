@@ -12,6 +12,8 @@ import {RouterModule, Routes} from "@angular/router";
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './components/contact/contact.component';
 import {FormsModule} from "@angular/forms";
+import { HeaderComponent } from './components/header/header.component';
+import { DetailsComponent } from './components/details/details.component';
 
 const routes: Routes = [
   {path: '',
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: 'about-us',
     component: AboutUsComponent},
   {path: 'contact-us',
-    component: ContactComponent}
+    component: ContactComponent},
+  // {path: 'detail',
+  //   component: DetailComponent}
 ]
 
 @NgModule({
@@ -28,7 +32,9 @@ const routes: Routes = [
     AboutUsComponent,
     HomeComponent,
     ListComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent,
+    DetailsComponent
   ],
   imports: [
     CommonModule,
