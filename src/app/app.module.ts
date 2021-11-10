@@ -8,24 +8,35 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from "@angular/material/button";
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
+import {RouterModule, Routes} from "@angular/router";
+import { HttpClientModule } from '@angular/common/http';
 
-
+const routes: Routes = [
+  {path: '',
+    component: HomeComponent},
+  {path: 'about-us',
+    component: AboutUsComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutUsComponent,
     HomeComponent,
-    ListComponent,
-
+    ListComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  bootstrap : [AppComponent]
+  exports: [
+    RouterModule
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

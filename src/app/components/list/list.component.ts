@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Cards} from "../../model/Cards";
 
 @Component({
@@ -9,12 +9,15 @@ import {Cards} from "../../model/Cards";
 export class ListComponent implements OnInit{
 
   @Input() data: Cards[];
-
+  @Output() likeClick : EventEmitter<any> = new EventEmitter<any>()
 
 
 
   constructor() {
     this.data = [];
+  }
+  onLikeClick(){
+    this.likeClick.emit();
   }
 
   ngOnInit() {
