@@ -14,8 +14,10 @@ export class ProductService {
   constructor(private http: HttpClient) {
 
   }
-
   getProducts():Observable<Products[]> {
     return this.http.get<Products[]>(environment.API.baseUrl + environment.API.endpoint.product);
+  }
+  get(id:number): Observable<Products>{
+    return this.http.get<Products>(environment.API.baseUrl + environment.API.endpoint.product + '/' + id);
   }
 }

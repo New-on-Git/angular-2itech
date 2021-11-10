@@ -1,4 +1,10 @@
-<mat-card *ngFor="let datum of data" class="example-card" [ngStyle]="{float :'left', background : 'blue'}">
+<mat-card *ngFor="let datum of data"
+          class="example-card"
+          [ngStyle]="{float :'left',
+          background : 'blue'}"
+          (click)="onCardClick(datum.id)">
+
+
   <mat-card-header [ngStyle]="{background : 'red'}">
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{datum.title}}</mat-card-title>
