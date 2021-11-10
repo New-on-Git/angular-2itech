@@ -10,12 +10,15 @@ import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
 import {RouterModule, Routes} from "@angular/router";
 import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   {path: '',
     component: HomeComponent},
   {path: 'about-us',
-    component: AboutUsComponent}
+    component: AboutUsComponent},
+  {path: 'contact-us',
+    component: ContactComponent}
 ]
 
 @NgModule({
@@ -23,7 +26,8 @@ const routes: Routes = [
     AppComponent,
     AboutUsComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,

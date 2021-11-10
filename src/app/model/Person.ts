@@ -1,1 +1,1 @@
-export interface Person{name:string,age:number};
+export interface Person{id:number,name:string,age:number};

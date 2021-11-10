@@ -15,14 +15,14 @@ export class HomeComponent {
   data: Cards[] = [];
 
   constructor(private productService: ProductService) { }
-  onLikeClick(){
-    console.log('clicked');
+  onLikeClick(id:number){
+    console.log('clicked home '+ id);
   }
 
   ngOnInit() {
     this.productService.getProducts().subscribe((products) => {
       this.data = products.map((product) => {
-        return { title: product.name, subTitle: product.price + ' €', image: product.picture }
+        return {id:product.id, title: product.name, subTitle: product.price + ' €', image: product.picture }
       });
     })
   }

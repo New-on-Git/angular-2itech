@@ -1,1 +1,1 @@
-export type Cards = {title:string,subTitle:string,image:string}
+export type Cards = {id:number,title:string,subTitle:string,image:string}

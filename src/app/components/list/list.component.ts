@@ -16,8 +16,8 @@ export class ListComponent implements OnInit{
   constructor() {
     this.data = [];
   }
-  onLikeClick(){
-    this.likeClick.emit();
+  onLikeClick(id:number){
+    this.likeClick.emit(id);
   }
 
   ngOnInit() {
