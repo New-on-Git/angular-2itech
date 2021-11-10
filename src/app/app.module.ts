@@ -11,6 +11,7 @@ import { ListComponent } from './components/list/list.component';
 import {RouterModule, Routes} from "@angular/router";
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './components/contact/contact.component';
+import {FormsModule} from "@angular/forms";
 
 const routes: Routes = [
   {path: '',
@@ -36,7 +37,8 @@ const routes: Routes = [
     MatCardModule,
     MatButtonModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     RouterModule
