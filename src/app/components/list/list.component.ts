@@ -11,6 +11,7 @@ export class ListComponent implements OnInit{
   @Input() data: Cards[];
   @Output() likeClick : EventEmitter<any> = new EventEmitter<any>()
   @Output() cardClick : EventEmitter<any> = new EventEmitter<any>()
+  @Output() addClick : EventEmitter<any> = new EventEmitter<any>()
 
 
 
@@ -23,6 +24,10 @@ export class ListComponent implements OnInit{
   onCardClick(id:number){
     this.cardClick.emit(id);
   }
+   onAddClick(id:number){
+     this.addClick.emit(id);
+   }
+
   ngOnInit() {
   }
 }
